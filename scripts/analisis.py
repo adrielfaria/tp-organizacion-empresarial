@@ -1,3 +1,4 @@
+# importo librerias necesarias para el archivo csv y para generar el grafico
 import csv
 import matplotlib.pyplot as plt
 
@@ -6,7 +7,7 @@ ventas_totales = 0
 ventas_por_producto = {}
 ventas_por_mes = {}
 
-# Leer CSV
+# Leer archivo CSV de ventas
 with open("datos/ventas.csv", "r", encoding="utf-8") as archivo:
     lector = csv.DictReader(archivo)
 
@@ -43,7 +44,7 @@ producto_mas_vendido = max(
 print("Ventas totales:", ventas_totales)
 print("Producto más vendido:", producto_mas_vendido)
 
-# Crear gráfico
+# Generar gráfico mensual utilizando matplotlib
 meses = list(ventas_por_mes.keys())
 totales = list(ventas_por_mes.values())
 
